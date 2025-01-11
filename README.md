@@ -11,22 +11,8 @@ This repository has the detailed guide and driver codes for building a secure we
     - Static website hosting: Enable
     - Hosting type: Host a static website
     - Index document: index.html
-  * Go to the **Permission>Block public access** Section and then click **Edit**.
-  * Uncheck all the option to enable the public access.
-  * Go to the **Permission>Bucket policy** Section and then paste the below content:
-        {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "PublicReadGetObject",
-                "Effect": "Allow",
-                "Principal": "*",
-                "Action": "s3:GetObject",
-                "Resource": "arn:aws:s3:::<Bucket-Name>/*"
-            }
-        ]
-    }
-   * Save the changes.
+  * Go to the **Permission>Block public access** Section and make sure all the public access to the S3 bucket is blocked.
+  * Save the changes.
 # 3, ACM:
   * Request a new Public certificate.
   * Configure the below section and then click request:
